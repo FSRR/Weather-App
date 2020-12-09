@@ -1,0 +1,105 @@
+body {
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+.main-window {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:    "buttons"
+                            "weather"
+                            "footer";
+    background-color: #1E213A;
+    width: 30%;
+    /* height: 100vh; */
+}
+
+.main-buttons {
+    grid-area: buttons;
+    display: flex;
+    margin-top: 26px;
+    margin-left: 30px;
+    gap: 180px;
+}
+
+.buttons {
+    border: none;
+    background-color: #6E707A;
+    color: #E7E7EB;
+    padding: 5px 13px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main-weather {
+    grid-area: weather;
+    justify-self: center;
+}
+
+.main-image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.main-image-container::before {
+    content: "";
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    top: 80px;
+    left: -40px;
+    background-image: url(/static/img/Cloud-background.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: .05;
+}
+
+.main-grades {
+    margin: 20px 0 0;
+    width: 350px;
+    text-align: center;
+    font-size: 8rem;
+    font-weight: 500;
+    line-height: 169px;
+    color: #E7E7EB;
+}
+
+.main-grades span {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.459);
+}
+
+.main-name-weather {
+    width: 350px;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 70px;
+    color: #A09FB1;
+}
+
+.main-footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+.main-footer-content {
+    color: #88869D;
+    font-size: 1rem;
+}
+
+.main-footer-content span {margin: 0 15px;}
+
+.secondary-window {
+    background-color: #100E1D;
+    width: 70%;
+    z-index: 1;
+}
+
+
+
+
+

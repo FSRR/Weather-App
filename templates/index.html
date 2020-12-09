@@ -3,9 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD de no se que</title>
+    <link rel="stylesheet" href="/static/css/window-left.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500&display=swap" rel="stylesheet">
+    <title>Weather App</title>
 </head>
 <body>
-    
+    <article class="main-window">
+        <div class="main-buttons">
+            <button class="buttons button-places">Search for places</button>
+            <button class="buttons button-location"></button>
+        </div>
+        <div class="main-weather">
+            <div class="main-image-container">
+                <img src="../static/img/Shower.png" alt="Shower" class="main-image" width="150px">
+            </div>
+            <p class="main-grades">15<span>°C</span></p>
+            <p class="main-name-weather">Shower</p>
+        </div>
+        <div class="main-footer">
+            <p class="main-footer-content">Today <span>·</span> Fri 5 Jun</p>
+            <p class="main-footer-content">Helsinki</p>
+        </div>
+    </article>
+    <article class="secondary-window">
+        <button class="buttons">°C</button>
+        <button class="buttons">°F</button>
+        <ul>
+            <li>
+                <p>Tomorrow</p>
+                <img src="/static/img/Sleet.png" alt="Sleet">
+                <p>16°C</p>
+                <p>11°C</p>
+            </li>
+            <li>
+                <p>Sun, 7 Jun</p>
+                <img src="/static/img/Sleet.png" alt="Sleet">
+                <p>16°C</p>
+                <p>11°C</p>
+            </li>
+            <li>
+                <p>Mon, 8 Jun</p>
+                <img src="/static/img/Thunderstorm.png" alt="Thunderstorm">
+                <p>16°C</p>
+                <p>11°C</p>
+            </li>
+            <li>
+                <p>Tue, 9 Jun</p>
+                <img src="/static/img/LightCloud.png" alt="LightCloud">
+                <p>16°C</p>
+                <p>11°C</p>
+            </li>
+            <li>
+                <p>Wed, 10 Jun</p>
+                <img src="/static/img/LightRain.png" alt="LightRain">
+                <p>16°C</p>
+                <p>11°C</p>
+            </li>
+        </ul>
+        <section>
+            <h2>Today's Highlights</h2>
+            <div>
+                <p>Wind status</p>
+                <p>7mph</p>
+            </div>
+            <div>
+                <p>Humidity</p>
+                <p>84%</p>
+                <input type="range">
+            </div>
+            <div>
+                <p>Visibility</p>
+                <p>6,4 miles</p>
+            </div>
+            <div>
+                <p>Air Pressure</p>
+                <p>998 mb</p>
+            </div>
+        </section>
+        <p>Sebastian Retiz @ DevChallenges.io</p>
+    </article>
 </body>
 </html>
