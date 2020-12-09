@@ -4,84 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/window-left.css">
+    <link rel="stylesheet" href="/static/css/window-right.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500&display=swap" rel="stylesheet">
     <title>Weather App</title>
 </head>
 <body>
     <article class="main-window">
-        <div class="main-buttons">
-            <button class="buttons button-places">Search for places</button>
-            <button class="buttons button-location"></button>
+        <div class="main-container-buttons">
+            <button class="buttons">Search for places</button>
+            <button class="buttons main-button-location">
+                <img src="/static/img/ubicacion.png" alt="location" width="30">
+            </button>
         </div>
-        <div class="main-weather">
+        <div class="main-container-weather">
             <div class="main-image-container">
-                <img src="../static/img/Shower.png" alt="Shower" class="main-image" width="150px">
+                <img src="../static/img/Shower.png" alt="Shower" class="main-image" width="150">
             </div>
             <p class="main-grades">15<span>°C</span></p>
-            <p class="main-name-weather">Shower</p>
+            <h1 class="main-name-weather">Shower</h1>
         </div>
         <div class="main-footer">
             <p class="main-footer-content">Today <span>·</span> Fri 5 Jun</p>
             <p class="main-footer-content">Helsinki</p>
         </div>
     </article>
-    <article class="secondary-window">
-        <button class="buttons">°C</button>
-        <button class="buttons">°F</button>
-        <ul>
-            <li>
-                <p>Tomorrow</p>
-                <img src="/static/img/Sleet.png" alt="Sleet">
-                <p>16°C</p>
-                <p>11°C</p>
-            </li>
-            <li>
-                <p>Sun, 7 Jun</p>
-                <img src="/static/img/Sleet.png" alt="Sleet">
-                <p>16°C</p>
-                <p>11°C</p>
-            </li>
-            <li>
-                <p>Mon, 8 Jun</p>
-                <img src="/static/img/Thunderstorm.png" alt="Thunderstorm">
-                <p>16°C</p>
-                <p>11°C</p>
-            </li>
-            <li>
-                <p>Tue, 9 Jun</p>
-                <img src="/static/img/LightCloud.png" alt="LightCloud">
-                <p>16°C</p>
-                <p>11°C</p>
-            </li>
-            <li>
-                <p>Wed, 10 Jun</p>
-                <img src="/static/img/LightRain.png" alt="LightRain">
-                <p>16°C</p>
-                <p>11°C</p>
-            </li>
-        </ul>
-        <section>
-            <h2>Today's Highlights</h2>
-            <div>
-                <p>Wind status</p>
-                <p>7mph</p>
+    <section class="secondary-window">
+        <div class="secondary-container-buttons">
+            <button class="buttons secondary-buttons">°C</button>
+            <button class="buttons secondary-buttons">°F</button>
+        </div>
+        <div class="secondary-container-weather">
+            <ul class="secondary-weather">
+                <li class="secondary-item-weather">
+                    <h2 class="secondary-item-weather-text">Tomorrow</h2>
+                    <img src="/static/img/Sleet.png" class="sencondary-item-weather-img" alt="Sleet" width="75">
+                    <div class="secondary-item-weather-text">
+                        <p class="secondary-item-weather-g1">16°C</p>
+                        <p class="secondary-item-weather-g2">11°C</p>
+                    </div>
+                </li>
+                <li class="secondary-item-weather">
+                    <h2 class="secondary-item-weather-text">Sun, 7 Jun</h2>
+                    <img src="/static/img/Sleet.png" class="sencondary-item-weather-img" alt="Sleet" width="75">
+                    <div class="secondary-item-weather-text">
+                        <p class="secondary-item-weather-g1">16°C</p>
+                        <p class="secondary-item-weather-g2">11°C</p>
+                    </div>
+                </li>
+                <li class="secondary-item-weather">
+                    <h2 class="secondary-item-weather-text">Mon, 8 Jun</h2>
+                    <img src="/static/img/Thunderstorm.png" class="sencondary-item-weather-img" alt="Thunderstorm" width="75">
+                    <div class="secondary-item-weather-text">
+                        <p class="secondary-item-weather-g1">16°C</p>
+                        <p class="secondary-item-weather-g2">11°C</p>
+                    </div>
+                </li>
+                <li class="secondary-item-weather">
+                    <h2 class="secondary-item-weather-text">Tue, 9 Jun</h2>
+                    <img src="/static/img/LightCloud.png" class="sencondary-item-weather-img" alt="LightCloud" width="75">
+                    <div class="secondary-item-weather-text">
+                        <p class="secondary-item-weather-g1">16°C</p>
+                        <p class="secondary-item-weather-g2">11°C</p>
+                    </div>
+                </li>
+                <li class="secondary-item-weather">
+                    <h2 class="secondary-item-weather-text">Wed, 10 Jun</h2>
+                    <img src="/static/img/LightRain.png" class="sencondary-item-weather-img" alt="LightRain" width="75">
+                    <div class="secondary-item-weather-text">
+                        <p class="secondary-item-weather-g1">16°C</p>
+                        <p class="secondary-item-weather-g2">11°C</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <section class="secondary-container-highlights">
+            <h2 class="sencondary-highlights-title">Today's Highlights</h2>
+            <div class="sencondary-highlights-item">
+                <h3 class="secondary-item-highlights-title">Wind status</h3>
+                <p class="secondary-item-highlights-p">7<span>mph</span></p>
+                <p class="sencondary-item-highlights-foot">wsw</p>
             </div>
-            <div>
-                <p>Humidity</p>
-                <p>84%</p>
+            <div class="sencondary-highlights-item">
+                <h3 class="secondary-item-highlights-title">Humidity</h3>
+                <p class="secondary-item-highlights-p">84<span>%</span></p>
                 <input type="range">
             </div>
-            <div>
-                <p>Visibility</p>
-                <p>6,4 miles</p>
+            <div class="sencondary-highlights-item">
+                <h3 class="secondary-item-highlights-title">Visibility</h3>
+                <p class="secondary-item-highlights-p">6,4 <span>miles</span></p>
             </div>
-            <div>
-                <p>Air Pressure</p>
-                <p>998 mb</p>
-            </div>
+            <div class="sencondary-highlights-item">
+                <h3 class="secondary-item-highlights-title">Air Pressure</h3>
+                <p class="secondary-item-highlights-p">998 <span>mb</span></p>
+            </div class="sencondary-item-highlights">
         </section>
-        <p>Sebastian Retiz @ DevChallenges.io</p>
-    </article>
+        <p class="secondary-footer">Sebastian Retiz @ DevChallenges.io</p>
+    </section>
 </body>
 </html>

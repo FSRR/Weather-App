@@ -1,0 +1,110 @@
+.secondary-window {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 2.5rem;
+    background-color: #100E1D;
+    width: 70%;
+    z-index: 1;
+}
+
+.secondary-container-buttons {
+    display: flex;
+    gap: 10px;
+    justify-self: end;
+    margin-right: 4.3rem;
+    margin-top: 1.6rem;
+}
+
+.secondary-buttons {
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.secondary-container-weather {
+    width: 85%;
+    justify-self: center;
+}
+
+.secondary-weather {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.secondary-item-weather {
+    display: flex;
+    flex-direction: column;
+    background: #1E213A;
+    padding: .5rem 1.5rem;
+}
+
+.secondary-item-weather-text {
+    display: flex;
+    gap: 1.25rem;
+    color: #E7E7EB;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.secondary-item-weather-g2{
+    font-size: .9rem;
+    grid-area: g2;
+    color: rgba(255, 255, 255, 0.459);
+}
+
+.secondary-container-highlights {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto repeat(2, 1fr);
+    row-gap: 1.8rem;
+    column-gap: 3.7rem;
+    width: 85%;
+}
+
+.sencondary-highlights-title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: #E7E7EB;
+}
+
+.sencondary-highlights-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E213A;
+    color: #E7E7EB;
+    padding: 1.25rem 2.8rem;
+}
+
+.secondary-item-highlights-title {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: .3rem 0;
+}
+
+.secondary-item-highlights-p {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 1.25rem 0;
+}
+
+.secondary-item-highlights-p span {
+    font-weight: normal;
+    font-size: 2.5rem;
+}
+
+.sencondary-item-highlights-foot {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.secondary-footer {
+    justify-self: center;
+    color: #616475;
+    font-size: .9rem;
+}
