@@ -31,6 +31,7 @@ body {
     padding: 12px 15px;
     border: none;
     color: #E7E7EB;
+    cursor: pointer;
 }
 
 .buttons:hover {
