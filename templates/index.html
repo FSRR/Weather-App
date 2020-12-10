@@ -13,7 +13,7 @@
 <body>
     <article class="main-window">
         <div class="main-container-buttons">
-            <button class="buttons">Search for places</button>
+            <button class="buttons button-search-place" id="searchPlace">Search for places</button>
             <button class="buttons main-button-location">
                 <img src="/static/img/ubicacion.png" alt="location" width="30">
             </button>
@@ -102,11 +102,11 @@
         </section>
         <p class="secondary-footer">Sebastian Retiz @ DevChallenges.io</p>
     </section>
-    <div class="container-search">
-        <button class="buttons-search close-container-search">X</button>
+    <div class="container-search" id="containerSearch">
+        <button class="buttons close-container-search" id="closeContainerSearch">X</button>
         <div class="search">
             <input type="text" class="input-search" placeholder="search location">
-            <button class="buttons-search submit-search">Search</button>
+            <button class="submit-search">Search</button>
         </div>
         <div class="search-results">
             <a href="##" class="search-result-item">London</a>
@@ -114,5 +114,7 @@
             <a href="##" class="search-result-item">Long Beach</a>
         </div>
     </div>
+
+    <script src="/static/js/open-search.js"></script>
 </body>
 </html>
