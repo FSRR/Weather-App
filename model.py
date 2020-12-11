@@ -6,52 +6,21 @@ class DayDao:
 
     def dayOne(self, data):
         today = Day()
-        today.temperature = data['the_temp']
-        today.weather = data['weather_state_name']
-        today.date = data['applicable_date']
-        today.windStatus = data['wind_speed']
-        today.humidity = data['humidity']
-        today.visibility = data['visibility']
-        today.airPressure = data['air_pressure']
+        today.temperature = round(data['consolidated_weather']['the_temp'], 1)
+        today.weather = data['consolidated_weather']['weather_state_name']
+        today.date = data['consolidated_weather']['applicable_date']
+        today.windStatus = round(data['consolidated_weather']['wind_speed'], 1)
+        today.humidity = round(data['consolidated_weather']['humidity'], 1)
+        today.visibility = round(data['consolidated_weather']['visibility'], 1)
+        today.airPressure = round(data['consolidated_weather']['air_pressure'])
+        today.place = data.title
         information = (today.temperature, today.weather, today.date, today.windStatus, today.humidity, today.visibility, today.airPressure)
         return information
 
-    def dayTwo(self, data):
+    def anotherDays(self, data):
         tomorrow = Day()
         tomorrow.temperature = data['the_temp']
         tomorrow.weather = data['weather_state_name']
         tomorrow.date = data['applicable_date']
         information = (tomorrow.temperature, tomorrow.weather, tomorrow.date)
-        return information
-
-    def dayThree(self, data):
-        three = Day()
-        three.temperature = data['the_temp']
-        three.weather = data['weather_state_name']
-        three.date = data['applicable_date']
-        information = (three.temperature, three.weather, three.date)
-        return information
-
-    def dayFour(self, data):
-        four = Day()
-        four.temperature = data['the_temp']
-        four.weather = data['weather_state_name']
-        four.date = data['applicable_date']
-        information = (four.temperature, four.weather, four.date)
-        return information
-
-    def dayFive(self, data):
-        five = Day()
-        five.temperature = data['the_temp']
-        five.weather = data['weather_state_name']
-        five.date = data['applicable_date']
-        information = (five.temperature, five.weather, five.date)
-        return information
-
-    def daySix(self, data):
-        six = Day()
-        six.temperature = data['the_temp']
-        six.weather = data['weather_state_name']
-        six.date = data['applicable_date']
-        information = (six.temperature, six.weather, six.date)
         return information

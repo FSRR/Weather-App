@@ -20,10 +20,10 @@
         </div>
         <div class="main-container-weather">
             <div class="main-image-container">
-                <img src="../static/img/Shower.png" alt="Shower" class="main-image" width="150">
+                <img src="../static/img/{{ today.1 }}.png" alt="Shower" class="main-image" width="150">
             </div>
-            <p class="main-grades">15<span>°C</span></p>
-            <h1 class="main-name-weather">Shower</h1>
+            <p class="main-grades">{{ today.0 }}<span>°C</span></p>
+            <h1 class="main-name-weather">{{ today.1 }}</h1>
         </div>
         <div class="main-footer">
             <p class="main-footer-content">Today <span>·</span> Fri 5 Jun</p>
@@ -83,21 +83,21 @@
             <h2 class="sencondary-highlights-title">Today's Highlights</h2>
             <div class="sencondary-highlights-item">
                 <h3 class="secondary-item-highlights-title">Wind status</h3>
-                <p class="secondary-item-highlights-p">7<span>mph</span></p>
+                <p class="secondary-item-highlights-p">{{ today.3 }}<span>mph</span></p>
                 <p class="sencondary-item-highlights-foot">wsw</p>
             </div>
             <div class="sencondary-highlights-item">
                 <h3 class="secondary-item-highlights-title">Humidity</h3>
-                <p class="secondary-item-highlights-p">84<span>%</span></p>
+                <p class="secondary-item-highlights-p">{{ today.4 }}<span>%</span></p>
                 <input type="range">
             </div>
             <div class="sencondary-highlights-item">
                 <h3 class="secondary-item-highlights-title">Visibility</h3>
-                <p class="secondary-item-highlights-p">6,4 <span>miles</span></p>
+                <p class="secondary-item-highlights-p">{{ today.5 }} <span>miles</span></p>
             </div>
             <div class="sencondary-highlights-item">
                 <h3 class="secondary-item-highlights-title">Air Pressure</h3>
-                <p class="secondary-item-highlights-p">998 <span>mb</span></p>
+                <p class="secondary-item-highlights-p">{{ today.6}} <span>mb</span></p>
             </div class="sencondary-item-highlights">
         </section>
         <p class="secondary-footer">Sebastian Retiz @ DevChallenges.io</p>

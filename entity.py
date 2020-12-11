@@ -7,6 +7,7 @@ class Day:
         self.__humidity = None
         self.__visibility = None
         self.__airPressure = None
+        self.__place = None
 
     @property
     def temperature(self):
@@ -36,6 +37,10 @@ class Day:
     def airPressure(self):
         return self.__airPressure
 
+    @property
+    def place(self):
+        return self.__place
+
     @temperature.setter
     def temperature(self, temperature):
         self.__temperature = temperature
@@ -63,3 +68,7 @@ class Day:
     @airPressure.setter
     def airPressure(self, airPressure):
         self.__airPressure = airPressure
+
+    @place.setter
+    def place(self, place):
+        self.__place = place
