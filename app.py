@@ -21,16 +21,8 @@ def index():
 
         today = lugar.today(responseJson)
 
-        dayTwo = lugar.days(responseJson, 1)
-        dayThree = lugar.days(responseJson, 2)
-        dayFour = lugar.days(responseJson, 3)
-        dayFive = lugar.days(responseJson, 4)
-        daySix = lugar.days(responseJson, 5)
+        data = lugar.days(responseJson)
 
-        data = [dayTwo, dayThree, dayFour, dayFive, daySix]
-
-        print(today)
-        print(data)
 
     return render_template('index.html', today = today, anothersDays = data)
 

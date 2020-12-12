@@ -22,12 +22,17 @@ class DayDao:
         return information
 
     def anotherDays(self, data):
-        tomorrow = Day()
-        tomorrow.maxTemp = round(data['max_temp'], 1)
-        tomorrow.minTemp = round(data['min_temp'], 1)
-        tomorrow.weather = data['weather_state_name']
+        dt = []
+        for i in range(5):
+            tomorrow = Day()
+            tomorrow.maxTemp = round(data[i+1]['max_temp'], 1)
+            tomorrow.minTemp = round(data[i+1]['min_temp'], 1)
+            tomorrow.weather = data[i+1]['weather_state_name']
 
-        date = data['applicable_date']
-        tomorrow.date = datetime.strptime(date, '%Y-%m-%d').strftime('%a, %d %b')
-        information = (tomorrow.maxTemp, tomorrow.minTemp, tomorrow.weather, tomorrow.date)
-        return information
+            date = data[i+1]['applicable_date']
+            tomorrow.date = datetime.strptime(date, '%Y-%m-%d').strftime('%a, %d %b')
+            
+            information = (tomorrow.maxTemp, tomorrow.minTemp, tomorrow.weather, tomorrow.date)
+            dt.append(information)
+
+        return dt

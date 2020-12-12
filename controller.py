@@ -7,5 +7,5 @@ class DayController:
     def today(self, data):
         return self.obj.dayOne(data)
 
-    def days(self, data, i):
-        return self.obj.anotherDays(data['consolidated_weather'][i])
+    def days(self, data):
+        return self.obj.anotherDays(data['consolidated_weather'])
