@@ -89,7 +89,7 @@
             <div class="sencondary-highlights-item">
                 <h3 class="secondary-item-highlights-title">Humidity</h3>
                 <p class="secondary-item-highlights-p">{{ today.4 }}<span>%</span></p>
-                <input type="range">
+                <input type="range" min="0" max="100" value="{{ today.4 }}" disabled="disabled">
             </div>
             <div class="sencondary-highlights-item">
                 <h3 class="secondary-item-highlights-title">Visibility</h3>
