@@ -8,6 +8,8 @@ class Day:
         self.__visibility = None
         self.__airPressure = None
         self.__place = None
+        self.__maxTemp = None
+        self.__minTemp = None
 
     @property
     def temperature(self):
@@ -40,6 +42,14 @@ class Day:
     @property
     def place(self):
         return self.__place
+    
+    @property
+    def maxTemp(self):
+        return self.__maxTemp
+
+    @property
+    def minTemp(self):
+        return self.__minTemp
 
     @temperature.setter
     def temperature(self, temperature):
@@ -72,3 +82,11 @@ class Day:
     @place.setter
     def place(self, place):
         self.__place = place
+
+    @maxTemp.setter
+    def maxTemp(self, maxTemp):
+        self.__maxTemp = maxTemp
+
+    @minTemp.setter
+    def minTemp(self, minTemp):
+        self.__minTemp = minTemp

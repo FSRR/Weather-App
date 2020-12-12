@@ -26,8 +26,8 @@
             <h1 class="main-name-weather">{{ today.1 }}</h1>
         </div>
         <div class="main-footer">
-            <p class="main-footer-content">Today <span>·</span> Fri 5 Jun</p>
-            <p class="main-footer-content">Helsinki</p>
+            <p class="main-footer-content">Today <span>·</span> {{ today.2 }}</p>
+            <p class="main-footer-content">{{ today.7 }}</p>
         </div>
     </article>
     <section class="secondary-window">
@@ -39,42 +39,42 @@
             <ul class="secondary-weather">
                 <li class="secondary-item-weather">
                     <h2 class="secondary-item-weather-text">Tomorrow</h2>
-                    <img src="/static/img/Sleet.png" class="sencondary-item-weather-img" alt="Sleet" width="75">
+                    <img src="/static/img/{{ anothersDays.0.2 }}.png" class="sencondary-item-weather-img" alt="Sleet" width="75">
                     <div class="secondary-item-weather-text">
-                        <p class="secondary-item-weather-g1">16°C</p>
-                        <p class="secondary-item-weather-g2">11°C</p>
+                        <p class="secondary-item-weather-g1">{{ anothersDays.0.0}}°C</p>
+                        <p class="secondary-item-weather-g2">{{ anothersDays.0.1}}°C</p>
                     </div>
                 </li>
                 <li class="secondary-item-weather">
-                    <h2 class="secondary-item-weather-text">Sun, 7 Jun</h2>
-                    <img src="/static/img/Sleet.png" class="sencondary-item-weather-img" alt="Sleet" width="75">
+                    <h2 class="secondary-item-weather-text">{{ anothersDays.1.3}}</h2>
+                    <img src="/static/img/{{ anothersDays.1.2 }}.png" class="sencondary-item-weather-img" alt="Sleet" width="75">
                     <div class="secondary-item-weather-text">
-                        <p class="secondary-item-weather-g1">16°C</p>
-                        <p class="secondary-item-weather-g2">11°C</p>
+                        <p class="secondary-item-weather-g1">{{ anothersDays.1.0 }}°C</p>
+                        <p class="secondary-item-weather-g2">{{ anothersDays.1.1 }}°C</p>
                     </div>
                 </li>
                 <li class="secondary-item-weather">
-                    <h2 class="secondary-item-weather-text">Mon, 8 Jun</h2>
-                    <img src="/static/img/Thunderstorm.png" class="sencondary-item-weather-img" alt="Thunderstorm" width="75">
+                    <h2 class="secondary-item-weather-text">{{ anothersDays.2.3}}</h2>
+                    <img src="/static/img/{{ anothersDays.2.2 }}.png" class="sencondary-item-weather-img" alt="Thunderstorm" width="75">
                     <div class="secondary-item-weather-text">
-                        <p class="secondary-item-weather-g1">16°C</p>
-                        <p class="secondary-item-weather-g2">11°C</p>
+                        <p class="secondary-item-weather-g1">{{ anothersDays.2.0 }}°C</p>
+                        <p class="secondary-item-weather-g2">{{ anothersDays.2.1 }}°C</p>
                     </div>
                 </li>
                 <li class="secondary-item-weather">
-                    <h2 class="secondary-item-weather-text">Tue, 9 Jun</h2>
-                    <img src="/static/img/LightCloud.png" class="sencondary-item-weather-img" alt="LightCloud" width="75">
+                    <h2 class="secondary-item-weather-text">{{ anothersDays.3.3}}</h2>
+                    <img src="/static/img/{{ anothersDays.3.2 }}.png" class="sencondary-item-weather-img" alt="LightCloud" width="75">
                     <div class="secondary-item-weather-text">
-                        <p class="secondary-item-weather-g1">16°C</p>
-                        <p class="secondary-item-weather-g2">11°C</p>
+                        <p class="secondary-item-weather-g1">{{ anothersDays.3.0 }}°C</p>
+                        <p class="secondary-item-weather-g2">{{ anothersDays.3.1 }}°C</p>
                     </div>
                 </li>
                 <li class="secondary-item-weather">
-                    <h2 class="secondary-item-weather-text">Wed, 10 Jun</h2>
-                    <img src="/static/img/LightRain.png" class="sencondary-item-weather-img" alt="LightRain" width="75">
+                    <h2 class="secondary-item-weather-text">{{ anothersDays.4.3}}</h2>
+                    <img src="/static/img/{{ anothersDays.4.2 }}.png" class="sencondary-item-weather-img" alt="LightRain" width="75">
                     <div class="secondary-item-weather-text">
-                        <p class="secondary-item-weather-g1">16°C</p>
-                        <p class="secondary-item-weather-g2">11°C</p>
+                        <p class="secondary-item-weather-g1">{{ anothersDays.4.0 }}°C</p>
+                        <p class="secondary-item-weather-g2">{{ anothersDays.4.1 }}°C</p>
                     </div>
                 </li>
             </ul>

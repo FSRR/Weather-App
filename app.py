@@ -10,8 +10,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    # url = 'https://www.metaweather.com/api/location/418440/'
-    url = 'https://www.metaweather.com/api/location/44418/'
+    url = 'https://www.metaweather.com/api/location/418440/'
+    # url = 'https://www.metaweather.com/api/location/44418/'
     response = requests.get(url)
 
     if response.status_code == 200:
