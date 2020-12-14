@@ -1,5 +1,7 @@
 from flask import Flask
 from flask import render_template
+from flask import redirect
+from flask import url_for
 import requests
 import json
 from entity import *
@@ -25,6 +27,31 @@ def index():
 
 
     return render_template('index.html', today = today, anothersDays = data)
+
+
+@app.route('/hola')
+def place(woeid):
+    url = f'https://www.metaweather.com/api/location/{woeid}/'
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        responseJson = response.json()
+        print(responseJson)
+
+    return redirect(url_for('index'))
+
+
+@app.route('/<loc>')
+def location(loc):
+    url = f'https://www.metaweather.com/api/location/search/?lattlong={loc}'
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        responseJson = response.json()
+        woeid = responseJson[0]['woeid']
+        print(woeid)
+
+    return redirect(url_for(f'place({woeid})'))
 
 
 if __name__ == '__main__':

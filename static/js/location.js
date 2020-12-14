@@ -1,4 +1,5 @@
 const ubicacion = document.getElementById('location')
+let loc
 
 function getLocation() {
     if(navigator.geolocation) {
@@ -8,14 +9,21 @@ function getLocation() {
     }
 }
 
-let loc
 
 function showPosition(position) {
-    console.log(position.coords.latitude)
-    console.log(position.coords.longitude)
+    loc = `${position.coords.latitude},${position.coords.longitude}`
+    return loc
 }
 
 ubicacion.addEventListener('click', () => {
     getLocation()
+
+    let xhr
+    if(XMLHttpRequest) xhr = new XMLHttpRequest()
+    else xhr = new ActiveXObject()
+
+    xhr.open('GET', `/${loc}`)
+
+    xhr.send()
 })
 
