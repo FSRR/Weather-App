@@ -1,4 +1,3 @@
-console.log('hola');
 const searchPlace = document.getElementById('searchPlace')
 
 searchPlace.addEventListener('click', () => {

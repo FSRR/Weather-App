@@ -18,6 +18,7 @@ class DayDao:
         today.visibility = round(data['consolidated_weather'][0]['visibility'], 1)
         today.airPressure = round(data['consolidated_weather'][0]['air_pressure'])
         today.place = data['title']
+
         information = (today.temperature, today.weather, today.date, today.windStatus, today.humidity, today.visibility, today.airPressure, today.place)
         return information
 

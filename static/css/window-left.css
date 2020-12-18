@@ -1,5 +1,6 @@
 body {
     display: flex;
+    position: relative;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     margin: 0;
@@ -40,6 +41,9 @@ body {
 }
 
 .main-button-location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2px 5px;
     border-radius: 50%;
 }

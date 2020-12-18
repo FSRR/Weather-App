@@ -12,9 +12,9 @@ import json
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-    # url = 'https://www.metaweather.com/api/location/418440/'
-    url = 'https://www.metaweather.com/api/location/44418/'
+@app.route('/place/<woeid>')
+def index(woeid = 44418):
+    url = f'https://www.metaweather.com/api/location/{woeid}/'
     response = req.get(url)
 
     if response.status_code == 200:
@@ -27,23 +27,6 @@ def index():
         data = lugar.days(responseJson)
 
         return render_template('index.html', today = today, anothersDays = data)
-
-
-@app.route('/place/<woeid>', methods = ['GET'])
-def place(woeid):
-    if request.method == 'GET':
-        url = f'https://www.metaweather.com/api/location/{woeid}/'
-        response = req.get(url)
-
-        if response.status_code == 200:
-            responseJson = response.json()
-            lugar = DayController()
-
-            today = lugar.today(responseJson)
-
-            data = lugar.days(responseJson)
-
-    return render_template('index.html', today = today, anothersDays = data)
 
 
 @app.route('/location/<loc>', methods = ['GET'])

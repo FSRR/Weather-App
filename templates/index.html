@@ -22,7 +22,7 @@
             <div class="main-image-container">
                 <img src="../static/img/{{ today.1 }}.png" alt="Shower" class="main-image" width="150">
             </div>
-            <p class="main-grades">{{ today.0 }}<span>°C</span></p>
+            <p class="main-grades" id="main-grade" data-scale="{{ today.0 }}">{{ today.0 }}<span>°C</span></p>
             <h1 class="main-name-weather">{{ today.1 }}</h1>
         </div>
         <div class="main-footer">
@@ -32,8 +32,8 @@
     </article>
     <section class="secondary-window">
         <div class="secondary-container-buttons">
-            <button class="buttons secondary-buttons">°C</button>
-            <button class="buttons secondary-buttons">°F</button>
+            <button class="buttons secondary-buttons button-selected" id="celsius">°C</button>
+            <button class="buttons secondary-buttons" id="fahrenheit">°F</button>
         </div>
         <div class="secondary-container-weather">
             <ul class="secondary-weather">
@@ -41,40 +41,40 @@
                     <h2 class="secondary-item-weather-text">Tomorrow</h2>
                     <img src="/static/img/{{ anothersDays.0.2 }}.png" class="sencondary-item-weather-img" alt="Sleet" width="75">
                     <div class="secondary-item-weather-text">
-                        <p class="secondary-item-weather-g1">{{ anothersDays.0.0}}°C</p>
-                        <p class="secondary-item-weather-g2">{{ anothersDays.0.1}}°C</p>
+                        <p class="secondary-item-weather-g1 secondary-grades" data-scale="{{ anothersDays.0.0}}">{{ anothersDays.0.0 }}°C</p>
+                        <p class="secondary-item-weather-g2 secondary-grades" data-scale="{{ anothersDays.0.1}}">{{ anothersDays.0.1 }}°C</p>
                     </div>
                 </li>
                 <li class="secondary-item-weather">
                     <h2 class="secondary-item-weather-text">{{ anothersDays.1.3}}</h2>
                     <img src="/static/img/{{ anothersDays.1.2 }}.png" class="sencondary-item-weather-img" alt="Sleet" width="75">
                     <div class="secondary-item-weather-text">
-                        <p class="secondary-item-weather-g1">{{ anothersDays.1.0 }}°C</p>
-                        <p class="secondary-item-weather-g2">{{ anothersDays.1.1 }}°C</p>
+                        <p class="secondary-item-weather-g1 secondary-grades" data-scale="{{ anothersDays.1.0 }}">{{ anothersDays.1.0 }}°C</p>
+                        <p class="secondary-item-weather-g2 secondary-grades" data-scale="{{ anothersDays.1.1 }}">{{ anothersDays.1.1 }}°C</p>
                     </div>
                 </li>
                 <li class="secondary-item-weather">
                     <h2 class="secondary-item-weather-text">{{ anothersDays.2.3}}</h2>
                     <img src="/static/img/{{ anothersDays.2.2 }}.png" class="sencondary-item-weather-img" alt="Thunderstorm" width="75">
                     <div class="secondary-item-weather-text">
-                        <p class="secondary-item-weather-g1">{{ anothersDays.2.0 }}°C</p>
-                        <p class="secondary-item-weather-g2">{{ anothersDays.2.1 }}°C</p>
+                        <p class="secondary-item-weather-g1 secondary-grades" data-scale="{{ anothersDays.2.0 }}">{{ anothersDays.2.0 }}°C</p>
+                        <p class="secondary-item-weather-g2 secondary-grades" data-scale="{{ anothersDays.2.1 }}">{{ anothersDays.2.1 }}°C</p>
                     </div>
                 </li>
                 <li class="secondary-item-weather">
                     <h2 class="secondary-item-weather-text">{{ anothersDays.3.3}}</h2>
                     <img src="/static/img/{{ anothersDays.3.2 }}.png" class="sencondary-item-weather-img" alt="LightCloud" width="75">
                     <div class="secondary-item-weather-text">
-                        <p class="secondary-item-weather-g1">{{ anothersDays.3.0 }}°C</p>
-                        <p class="secondary-item-weather-g2">{{ anothersDays.3.1 }}°C</p>
+                        <p class="secondary-item-weather-g1 secondary-grades" data-scale="{{ anothersDays.3.0 }}">{{ anothersDays.3.0 }}°C</p>
+                        <p class="secondary-item-weather-g2 secondary-grades" data-scale="{{ anothersDays.3.1 }}">{{ anothersDays.3.1 }}°C</p>
                     </div>
                 </li>
                 <li class="secondary-item-weather">
                     <h2 class="secondary-item-weather-text">{{ anothersDays.4.3}}</h2>
                     <img src="/static/img/{{ anothersDays.4.2 }}.png" class="sencondary-item-weather-img" alt="LightRain" width="75">
                     <div class="secondary-item-weather-text">
-                        <p class="secondary-item-weather-g1">{{ anothersDays.4.0 }}°C</p>
-                        <p class="secondary-item-weather-g2">{{ anothersDays.4.1 }}°C</p>
+                        <p class="secondary-item-weather-g1 secondary-grades" data-scale="{{ anothersDays.4.0 }}">{{ anothersDays.4.0 }}°C</p>
+                        <p class="secondary-item-weather-g2 secondary-grades" data-scale="{{ anothersDays.4.1 }}">{{ anothersDays.4.1 }}°C</p>
                     </div>
                 </li>
             </ul>
@@ -105,17 +105,24 @@
     <div class="container-search" id="containerSearch">
         <button class="buttons close-container-search" id="closeContainerSearch">X</button>
         <div class="search">
-            <input type="text" class="input-search" placeholder="search location">
-            <button class="submit-search">Search</button>
+            <input type="text" class="input-search" id="box-search" placeholder="search location">
+            <button class="submit-search" id="button-search">Search</button>
         </div>
-        <div class="search-results">
-            <a href="##" class="search-result-item">London</a>
-            <a href="##" class="search-result-item">Barcelona</a>
-            <a href="##" class="search-result-item">Long Beach</a>
-        </div>
+        <ul class="search-results">
+            <li class="search-result-item show-item item-result"><a href="/place/44418" title="England">London</a></li>
+            <li class="search-result-item show-item item-result"><a href="/place/753692" title="Spain">Barcelona</a></li>
+            <li class="search-result-item show-item item-result"><a href="/place/766273" title="Spain">Madrid</a></li>
+            <li class="search-result-item show-item item-result"><a href="/place/2459115" title="USA">New York</a></li>
+            <li class="search-result-item show-item item-result"><a href="/place/2487956" title="USA">San Francisco</a></li>
+            <li class="search-result-item show-item item-result"><a href="/place/418440" title="Perú">Lima</a></li>
+            <li class="search-result-item show-item item-result"><a href="/place/349859" title="Chile">Santiago</a></li>
+            <li class="search-result-item show-item item-result"><a href="/place/468739" title="Argentina">Argentina</a></li>
+        </ul>
     </div>
 
     <script src="/static/js/open-search.js"></script>
     <script src="/static/js/location.js"></script>
+    <script src="/static/js/scales.js"></script>
+    <script src="/static/js/findplace.js"></script>
 </body>
 </html>

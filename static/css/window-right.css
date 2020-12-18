@@ -21,6 +21,12 @@
     font-weight: bold;
 }
 
+.button-selected {
+    background-color: #E7E7EB;
+    color: #110E3C;
+    cursor: auto;
+}
+
 .secondary-container-weather {
     width: 85%;
     justify-self: center;
