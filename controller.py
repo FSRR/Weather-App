@@ -1,11 +1,11 @@
 from model import *
 
 class DayController:
-    def __init__(self):
-        self.obj = DayDao()
+    def __init__(self, woeid):
+        self.obj = DayDao(woeid)
 
-    def today(self, data):
-        return self.obj.dayOne(data)
+    def today(self):
+        return self.obj.dayOne()
 
-    def days(self, data):
-        return self.obj.anotherDays(data['consolidated_weather'])
+    def days(self):
+        return self.obj.anotherDays()

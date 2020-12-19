@@ -1,11 +1,13 @@
 from datetime import datetime
 from entity import *
+from request import *
 
 class DayDao:
-    def __init__(self):
-        pass
+    def __init__(self, woeid):
+        self.request = ApiRequest().myRequest(woeid)
 
-    def dayOne(self, data):
+    def dayOne(self):
+        data = self.request
         today = Day()
         today.temperature = round(data['consolidated_weather'][0]['the_temp'], 1)
         today.weather = data['consolidated_weather'][0]['weather_state_name']
@@ -22,7 +24,8 @@ class DayDao:
         information = (today.temperature, today.weather, today.date, today.windStatus, today.humidity, today.visibility, today.airPressure, today.place)
         return information
 
-    def anotherDays(self, data):
+    def anotherDays(self):
+        data = self.request['consolidated_weather']
         dt = []
         for i in range(5):
             tomorrow = Day()
