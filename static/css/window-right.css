@@ -1,18 +1,17 @@
 .secondary-window {
     display: grid;
+    grid-template-columns: 100%;
     grid-template-rows: auto auto 1fr;
     gap: 2.5rem;
     background-color: #100E1D;
     width: 70%;
-    z-index: 1;
+    padding: 1.6rem 4rem;
 }
 
 .secondary-container-buttons {
     display: flex;
     gap: 10px;
     justify-self: end;
-    margin-right: 4.3rem;
-    margin-top: 1.6rem;
 }
 
 .secondary-buttons {
@@ -28,7 +27,7 @@
 }
 
 .secondary-container-weather {
-    width: 85%;
+    width: 100%;
     justify-self: center;
 }
 
@@ -68,7 +67,7 @@
     grid-template-rows: auto repeat(2, 1fr);
     row-gap: 1.8rem;
     column-gap: 3.7rem;
-    width: 85%;
+    width: 100%;
 }
 
 .sencondary-highlights-title {

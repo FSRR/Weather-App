@@ -5,7 +5,7 @@
     position: fixed;
     background-color: #1E213A;
     top: 0;
-    left: -401px;
+    right: 100%;
     width: 30%;
     height: 100%;
     padding: 0 2.5rem 2rem;
@@ -14,7 +14,7 @@
 }
 
 .show-container-search {
-    transform: translateX(401px);
+    transform: translateX(100%);
 }
 
 .close-container-search {
