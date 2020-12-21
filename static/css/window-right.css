@@ -6,6 +6,7 @@
     background-color: #100E1D;
     width: 70%;
     padding: 1.6rem 4rem;
+    box-sizing: border-box;
 }
 
 .secondary-container-buttons {
