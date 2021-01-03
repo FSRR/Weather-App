@@ -1,77 +1,74 @@
 .container-search {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
     position: fixed;
-    background-color: #1E213A;
     top: 0;
     right: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
     width: 30%;
-    height: 100%;
-    padding: 0 2.5rem 2rem;
+    min-width: max-content;
     box-sizing: border-box;
-    transition: transform 0.5s ease;
+    padding: 0 2.5em 2em;
+    background-color: #1E213A;
+    transition: transform .5s ease;
 }
 
-.show-container-search {
-    transform: translateX(100%);
-}
+.show-container-search {transform: translateX(100%);}
 
 .close-container-search {
     position: relative;
-    top: 1.25rem;
-    right: calc(-100% + 2.5rem);
-    background-color: #1E213A;
-    width: 2.5rem;
-    height: 2.4rem;
+    top: 1em;
+    right: calc(-100% + 2em);
+    font-size: 1.25rem;
+    width: 2.5em;
+    height: 2em;
     border: none;
     border-radius: 50%;
     box-shadow: none;
     color: #E7E7EB;
-    font-size: 1.2rem;
+    background-color: #1E213A;
     padding: 0;
 }
 
 .search {
     display: flex;
-    gap: .5rem;
+    gap: .5em;
     width: 100%;
 }
 
 .input-search {
-    padding: .5rem 1rem;
-    border: 1px solid #E7E7EB;
-    background-color: #1E213A;
-    color: #616475;
     width: 100%;
     box-sizing: border-box;
+    padding: .5em 1em;
+    border: 1px solid #E7E7EB;
+    color: #616475;
+    background-color: #1E213A;
 }
 
 .submit-search {
     background-color: #3C47E9;
     color: #E7E7EB;
     border: none;
-    padding: .5rem 1rem;
+    padding: .5em 1em;
 }
 
 .search-results {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1em;
     width: 100%;
     padding: 0;
     margin: 0;
     list-style-type: none;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .search-result-item {
     background-color: #1E213A;
-    padding: 1.2rem .7rem;
-    border: 1px;
-    width: 100%;
+    padding: 0 .7em;
     border: 1px solid #1E213A;
     text-decoration: none;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -81,6 +78,8 @@
 }
 
 .search-result-item a {
+    display: block;
+    padding: 1.2em 0;
     color: #E7E7EB;
     text-decoration: none;
 }

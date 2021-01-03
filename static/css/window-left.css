@@ -2,31 +2,32 @@ body {
     display: flex;
     position: relative;
     font-family: 'Raleway', sans-serif;
-    font-size: 16px;
     margin: 0;
+    width: 100%;
 }
 
 .main-window {
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: #1E213A;
-    padding: 1.7rem;
-    box-sizing: border-box;
     width: 30%;
+    min-width: 330px;
+    box-sizing: border-box;
+    background-color: #1E213A;
+    padding: 1.7em;
 }
 
 .main-container-buttons {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.25em;
     min-width: 230px;
 }
 
 .buttons {
     background-color: #585676;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 0.75rem 0.9rem;
+    padding: 0.75em 0.9em;
     border: none;
     color: #E7E7EB;
     cursor: pointer;
@@ -45,16 +46,14 @@ body {
     border-radius: 50%;
 }
 
-/* .main-container-weather {
-    grid-area: weather;
-    justify-self: center;
-} */
+.main-button-location img {width: 30px;}
 
 .main-image-container {
     position: relative;
     display: flex;
     justify-content: center;
-    height: 18rem;
+    align-items: center;
+    height: 18em;
 }
 
 .main-image-container::before {
@@ -65,47 +64,39 @@ body {
     top: 0;
     left: 0;
     background-image: url(/static/img/Cloud-background.png);
-    background-size: 110% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     opacity: .05;
 }
 
-.main-image {
-    position: relative;
-    top: 3rem;
-    height: 12rem;
-}
+.main-image {width: 150px;}
 
 .main-grades {
     margin: 0;
     text-align: center;
     font-size: 8rem;
     font-weight: 500;
-    line-height: 10.5rem;
+    line-height: 1.3em;
     color: #E7E7EB;
 }
 
 .main-grades span {
-    font-size: 3rem;
+    font-size: .3em;
     color: rgba(255, 255, 255, 0.459);
 }
 
 .main-name-weather {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 4.3rem;
+    margin-bottom: 1.7em;
     color: #A09FB1;
-}
-
-.main-footer {
-    grid-area: footer;
-    text-align: center;
 }
 
 .main-footer-content {
     color: #88869D;
     font-size: 1rem;
+    text-align: center;
 }
 
-.main-footer-content span {margin: 0 1rem;}
+.main-footer-content span {margin: 0 1em;}
