@@ -1,5 +1,6 @@
 import requests
 import json
+import pickle
 
 class ApiRequest:
     def myRequest(self, woeid):
@@ -8,10 +9,12 @@ class ApiRequest:
             response = requests.get(url)
             if response.status_code == 200:
                 responseJson = response.json()
-                print("Se efectuó la petición")
-                return responseJson
+                with  open('requests/place.json', 'w') as data:
+                    json.dump(responseJson, data)
+                
+                return 'Se efectuo la petición'
         except:
-            print('No se efectuó la petición')
+            print('No se efectuó la petición request')
 
     def myLocation(self, loc):
         try:
@@ -23,6 +26,7 @@ class ApiRequest:
                 print("Se efectuó la petición")
                 return location
         except:
-            print('No se efectuó la petición')
+            print('No se efectuó la petición location')
 
 
+prueba = ApiRequest().myRequest(44418)
