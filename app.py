@@ -9,6 +9,7 @@ from controller import *
 from request import *
 
 app = Flask(__name__)
+app.secret_key = 'gettherefast'
 
 @app.route('/')
 @app.route('/place/<woeid>')
